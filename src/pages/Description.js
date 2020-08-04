@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 import Grid from "../components/Grid";
 import { useParams } from "react-router-dom";
-import {
-  useFetchDataWithCache,
-  useFetchIdWithCache,
-} from "../useFetchDataWithCache";
+import { useFetchIdWithCache } from "../useFetchDataWithCache";
 
 const Description = () => {
   const { id } = useParams();
@@ -25,7 +22,7 @@ const Description = () => {
   } = results;
   const gend = gender === "F" ? "Woman" : "Man";
   return (
-    <Grid>
+    <>
       {error && <h3>{error.msg}</h3>}
       {loading && <h3>Loading...</h3>}
       {!loading && !error && (
@@ -41,7 +38,7 @@ const Description = () => {
           </div>
         </div>
       )}
-    </Grid>
+    </>
   );
 };
 
