@@ -175,6 +175,7 @@ input[type="search"]::placeholder {
   gap: 1.2em;
   width: 60em;
   place-items: center;
+  margin-bottom: 3em;
 }
 
 .footer {
@@ -237,5 +238,30 @@ input[type="search"]::placeholder {
   }
   100% {
     transform: translate(24px, 0);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .description-container img {
+    width: 80%;
+    object-fit: cover;
+    min-width: 20em;
+    height: 100%;
+  }
+  .description-container {
+    grid-row: 3;
+    grid-column: 2/3;
+    display: flex;
+    grid-gap: 1.2em;
+    gap: 1.2em;
+    width: 100%;
+    place-items: center;
+    flex-direction: column;
+  }
+  .heading-container h1 {
+    font-size: 1.2em;
+  }
+  .heading-container h2 {
+    font-size: 1em;
   }
 }
