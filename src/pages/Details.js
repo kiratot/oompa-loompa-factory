@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useFetchIdWithCache } from "../hooks/useFetchDataWithCache";
 import OompaLoompaDetail from "../components/OompaLoompaDetail";
+import Loading from "../components/Loading";
 
 const Description = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const Description = () => {
   return (
     <>
       {error && <h3>{error.msg}</h3>}
-      {loading && <h3>Loading...</h3>}
+      {loading && <Loading center />}
       {!loading && !error && (
         <OompaLoompaDetail
           id={id}

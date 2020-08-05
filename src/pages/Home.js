@@ -6,6 +6,8 @@ import OompaLoompa from "../components/OompaLoompa";
 import { useIO } from "../hooks/useIO";
 import { useFetchPageWithCache } from "../hooks/useFetchDataWithCache";
 import { LocalStorage } from "ttl-localstorage";
+
+import Loading from "../components/Loading";
 const Home = () => {
   const URL =
     "https://2q2woep105.execute-api.eu-west-1.amazonaws.com/napptilus/oompa-loompas?page=1";
@@ -52,7 +54,7 @@ const Home = () => {
       <Heading />
       <Grid>
         {error && <h3>{error.message}</h3>}
-        {loading && <h3>Loading...</h3>}
+        {loading && <Loading center={page === 1} />}
         {!loading &&
           !error &&
           filteredResults &&
@@ -94,7 +96,7 @@ const Home = () => {
         {!filteredResults && (
           <h3 ref={loadMoreRef}>
             {" "}
-            {loading ? "LOADING ..." : "That's all folks."}
+            {loading ? page !== 1 && <Loading /> : "That's all folks."}
           </h3>
         )}
       </Grid>
