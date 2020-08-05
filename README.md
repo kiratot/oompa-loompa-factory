@@ -1,3 +1,23 @@
+## Oompa Loompa's Crew 🤖 <br><br>
+
+
+### Hot to use: 
+
+1. Scroll to load more Oompa Loompas <br>
+1. Input the first name, last name or profession of your Oompa Loompa in the search bar in order to find it quickly <br>
+1. Click on your desired Oompa Loompa to see more details <br>
+
+### Features: 
+
+ * Infinite scrolling : Load more Oompa Loompas as you scroll
+ * The app takes in consideration heavy network calls, so no need to worry about exceeding your nework quota.
+ * Data fetched from API calls are automatically cached as you scroll or load more details about your favorite Oompa Loompa.
+ * Data is cached in Local Storage but when not available (i.e: browsing in private mode in iPhone with Safari), it uses Memory cache so you can beneficiate from the caching funcionality.
+ * Search bar so you can quickly find your Oompa Loompa 
+ * Responsive design that works with desktop and mobile
+ 
+ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
