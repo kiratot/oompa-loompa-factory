@@ -3,13 +3,13 @@ import React from "react";
 const SearchBar = ({ onChange, value }) => {
   console.log(value);
   return (
-    <div className="search-bar-container">
+    <div data-testid="searchbar" className="search-bar-container">
       <div className="input-container">
         <input
           placeholder="Search"
           type="search"
           name="search"
-          aria-label="Search through oompa loompas"
+          aria-label="search-input"
           value={value}
           onChange={onChange}
         />

@@ -1,7 +1,11 @@
 import React from "react";
 
 const Layout = ({ children }) => {
-  return <div className="grid-container">{children}</div>;
+  return (
+    <div data-testid="layout" className="grid-container">
+      {children}
+    </div>
+  );
 };
 
 export default Layout;

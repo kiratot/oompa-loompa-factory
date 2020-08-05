@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
 import "./App.css";
-import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
-import Description from "./pages/Description";
+import Details from "./pages/Details";
 
 function App() {
   return (
@@ -13,11 +13,9 @@ function App() {
       <Layout>
         <Header />
         <Switch>
-          <Route path="/ol/:id" component={Description} />
+          <Route path="/ol/:id" component={Details} />
           <Route path="/" component={Home} />
         </Switch>
-
-        <Footer />
       </Layout>
     </Router>
   );

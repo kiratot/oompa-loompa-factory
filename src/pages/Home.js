@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 import Grid from "../components/Grid";
 import OompaLoompa from "../components/OompaLoompa";
 import { useIO } from "../hooks/useIO";
-import { useFetchPageWithCache } from "../useFetchDataWithCache";
+import { useFetchPageWithCache } from "../hooks/useFetchDataWithCache";
 import { LocalStorage } from "ttl-localstorage";
 const Home = () => {
   const URL =

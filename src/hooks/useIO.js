@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 
 export const useIO = (loading, hasMore, setPage) => {
   const observer = useRef();
@@ -13,7 +13,7 @@ export const useIO = (loading, hasMore, setPage) => {
       });
       if (el) observer.current.observe(el);
     },
-    [loading, hasMore]
+    [loading, hasMore, setPage]
   );
   return loadMoreRef;
 };

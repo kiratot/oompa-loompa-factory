@@ -13,7 +13,7 @@ const OompaLoompa = ({
 
   return (
     <Link to={`/ol/${id}`}>
-      <div className="oompa-loompa-item">
+      <div data-testid="oompaloompa" className="oompa-loompa-item">
         <img src={image} alt={`${firstName} ${lastName}`} />
         <h3>
           {firstName} {lastName}
